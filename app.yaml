@@ -1,1 +1,2 @@
+service: my-secomd-app
 runtime: python39
