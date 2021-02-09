@@ -101,7 +101,7 @@
 						r.value = finalTranscripts + interimTranscripts ;
 					};
 					speechRecognizer.onerror = function (event) {
-						alert("ERROR");
+						alert(event.error);
 					};
 				}else{
 					r.innerHTML = 'No browser support. Please upgrade your browser';
