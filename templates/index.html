@@ -81,13 +81,13 @@
 			function startConverting () {
 				alert("testing1");
 				if('webkitSpeechRecognition' in window){
-					alert("testing2");
 					speechRecognizer.continuous = true;
 					speechRecognizer.interimResults = true;
 					speechRecognizer.lang = 'en-IN';
 					speechRecognizer.start();
 					var finalTranscripts = '';
 					speechRecognizer.onresult = function(event){
+						alert("testing 3");
 						var interimTranscripts = '';
 						for(var i = event.resultIndex; i < event.results.length; i++){
 							var transcript = event.results[i][0].transcript;
@@ -101,6 +101,7 @@
 						r.value = finalTranscripts + interimTranscripts ;
 					};
 					speechRecognizer.onerror = function (event) {
+						alert("ERROR");
 					};
 				}else{
 					r.innerHTML = 'No browser support. Please upgrade your browser';
@@ -109,6 +110,7 @@
 			//function to stop listening
 			function stopConverting()
 			{
+				alert("STOPPING");
 				speechRecognizer.stop();
 			}
 		
