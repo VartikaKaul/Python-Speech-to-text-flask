@@ -79,8 +79,9 @@
 			
 			//function to start listening to voice and then convert it to text
 			function startConverting () {
+				alert("testing1");
 				if('webkitSpeechRecognition' in window){
-					
+					alert("testing2");
 					speechRecognizer.continuous = true;
 					speechRecognizer.interimResults = true;
 					speechRecognizer.lang = 'en-IN';
